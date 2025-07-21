@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+  font-family: 'Inter', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Phoenix-inspired animations */
+.phoenix-rise {
+  animation: phoenixRise 2s ease-out forwards;
+}
+
+@keyframes phoenixRise {
+  0% {
+    opacity: 0;
+    transform: translateY(50px) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.flame-glow {
+  box-shadow: 0 0 20px rgba(239, 68, 68, 0.3);
+  transition: box-shadow 0.3s ease;
+}
+
+.flame-glow:hover {
+  box-shadow: 0 0 30px rgba(239, 68, 68, 0.5);
+}
+
+/* PRA Animation Styles */
+.pra-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .pra-container {
+    flex-direction: row;
+    justify-content: center;
+    gap: 3rem;
+  }
+}
+
+.typing-word {
+  display: flex;
+  align-items: baseline;
+  white-space: nowrap;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.first-letter {
+  font-size: 3rem;
+  line-height: 1;
+  background: linear-gradient(135deg, #ff4500 0%, #dc2626 50%, #b91c1c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+  animation: phoenixScale 0.8s ease-out forwards;
+  margin-right: 0.1em;
+  font-weight: 900;
+}
+
+.remaining-letters {
+  font-size: 2rem;
+  line-height: 1;
+  color: #374151;
+  display: inline-block;
+  font-weight: 600;
+}
+
+.dark .remaining-letters {
+  color: #d1d5db;
+}
+
+@media (min-width: 768px) {
+  .first-letter {
+    font-size: 4rem;
+  }
+  
+  .remaining-letters {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .first-letter {
+    font-size: 5rem;
+  }
+  
+  .remaining-letters {
+    font-size: 3rem;
+  }
+}
+
+@keyframes phoenixScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) rotate(-10deg);
+  }
+  50% {
+    transform: scale(1.1) rotate(5deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+.subtitle-fade {
+  animation: fadeInUp 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Card animations */
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.dark .card-hover:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Button styles */
+.btn-primary {
+  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 50%, #991b1b 100%);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(220, 38, 38, 0.4);
+}
+
+/* Fire flame dots animation */
+.flame-dots {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.flame-dot {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: radial-gradient(circle, #ff4500 0%, #dc2626 50%, transparent 70%);
+  border-radius: 50%;
+  opacity: 0;
+  animation: flameRise 8s infinite linear;
+}
+
+.flame-dot:nth-child(2n) {
+  width: 3px;
+  height: 3px;
+  background: radial-gradient(circle, #ff6b35 0%, #e50914 50%, transparent 70%);
+  animation-duration: 10s;
+}
+
+.flame-dot:nth-child(3n) {
+  width: 2px;
+  height: 2px;
+  background: radial-gradient(circle, #ff8c42 0%, #ff4500 50%, transparent 70%);
+  animation-duration: 12s;
+}
+
+@keyframes flameRise {
+  0% {
+    bottom: -10px;
+    opacity: 0;
+    transform: translateX(0) scale(0.5);
+  }
+  10% {
+    opacity: 0.8;
+    transform: translateX(5px) scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: translateX(-10px) scale(0.8);
+  }
+  90% {
+    opacity: 0.3;
+    transform: translateX(8px) scale(0.6);
+  }
+  100% {
+    bottom: 100vh;
+    opacity: 0;
+    transform: translateX(-5px) scale(0.3);
+  }
+}
+
+.btn-secondary {
+  border: 2px solid #dc2626;
+  color: #dc2626;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: #dc2626;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.dark .btn-secondary {
+  border-color: #ef4444;
+  color: #ef4444;
+}
+
+.dark .btn-secondary:hover {
+  background: #ef4444;
+  color: white;
+}
+
+/* Fade in animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Fade in animation for tooltips */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.2s ease-out;
+}
+
+/* Floating animation */
+.floating {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Pulse animation for map dots */
+.pulse-red {
+  animation: pulse-red 2s infinite;
+}
+
+@keyframes pulse-red {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 20px rgba(220, 38, 38, 0);
+  }
+}
+
+/* Service card expand animation */
+.service-expand {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.service-expand.expanded {
+  max-height: 1000px;
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 50%, #991b1b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Phoenix flame effect */
+.phoenix-flame {
+  position: relative;
+  overflow: hidden;
+}
+
+.phoenix-flame::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(220, 38, 38, 0.2), transparent);
+  animation: flame-sweep 3s infinite;
+}
+
+@keyframes flame-sweep {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* Responsive utilities */
+@media (max-width: 640px) {
+  .first-letter {
+    font-size: 3rem;
+  }
+  
+  .remaining-letters {
+    font-size: 2.5rem;
+  }
+}
