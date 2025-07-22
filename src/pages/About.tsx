@@ -66,7 +66,7 @@ const About: React.FC = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-4xl mx-auto fade-in">
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
-              About <span className="gradient-text">Euranix Technologies</span>
+              About <span className="gradient-text">Euranix</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 leading-relaxed">
               Euranix Technologies Private Limited builds cutting-edge software solutions 
