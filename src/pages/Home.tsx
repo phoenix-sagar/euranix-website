@@ -89,7 +89,7 @@ const Home: React.FC = () => {
     <div className="min-h-screen">
       {/* Fire flame dots animation */}
       <div className="flame-dots">
-        {Array.from({ length: 40 }, (_, i) => (
+        {Array.from({ length: 80 }, (_, i) => (
           <div
             key={i}
             className="flame-dot"
