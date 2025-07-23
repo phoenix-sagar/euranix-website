@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
-              <img src="/Euranix-logo-final.jpg" alt="Euranix Technologies" className="h-10 w-auto" />
+              <img src="/Euranix-logo-red.png" alt="Euranix Technologies" className="h-10 w-auto" />
             </div>
             <p className="text-gray-400 text-sm leading-relaxed">
               Euranix builds cutting-edge software solutions 

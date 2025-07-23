@@ -42,7 +42,7 @@ const Header: React.FC = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 hover:scale-105 transition-transform">
             <img
-              src="/Euranix-logo-final.jpg"
+              src="/Euranix-logo-red.png"
               alt="Euranix"
               className="h-16 w-auto lg:h-20 lg:w-auto"
             />
