@@ -31,21 +31,13 @@ const Services: React.FC = () => {
 
   const toggleCategory = (categoryId: string) => {
     const newExpanded = new Set(expandedCategories);
-    if (newExpanded.has(categoryId)) {
-      newExpanded.delete(categoryId);
-    } else {
-      newExpanded.add(categoryId);
-    }
+    newExpanded.has(categoryId) ? newExpanded.delete(categoryId) : newExpanded.add(categoryId);
     setExpandedCategories(newExpanded);
   };
 
   const toggleService = (serviceId: string) => {
     const newExpanded = new Set(expandedServices);
-    if (newExpanded.has(serviceId)) {
-      newExpanded.delete(serviceId);
-    } else {
-      newExpanded.add(serviceId);
-    }
+    newExpanded.has(serviceId) ? newExpanded.delete(serviceId) : newExpanded.add(serviceId);
     setExpandedServices(newExpanded);
   };
 
@@ -70,13 +62,13 @@ const Services: React.FC = () => {
       <section className="py-20 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-8">
-            {servicesData.map((category, categoryIndex) => (
+            {servicesData.map((category) => (
               <div key={category.id} className="fade-in">
                 <div className="card-hover bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700 overflow-hidden phoenix-flame">
                   {/* Category Header */}
                   <button
                     onClick={() => toggleCategory(category.id)}
-                    className="w-full p-8 text-left hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+                    className="w-full p-8 text-left hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors cursor-pointer"
                   >
                     <div className="flex items-center justify-between">
                       <div className="flex items-center space-x-4">
@@ -90,7 +82,7 @@ const Services: React.FC = () => {
                           </p>
                         </div>
                       </div>
-                      <div className="flex-shrink-0">
+                      <div className="flex-shrink-0 pointer-events-none">
                         {expandedCategories.has(category.id) ? (
                           <ChevronUp className="h-6 w-6 text-red-600 dark:text-red-400" />
                         ) : (
@@ -103,11 +95,11 @@ const Services: React.FC = () => {
                   {/* Category Content */}
                   <div className={`service-expand ${expandedCategories.has(category.id) ? 'expanded' : ''}`}>
                     <div className="px-8 pb-8 space-y-6">
-                      {category.services.map((service, serviceIndex) => (
+                      {category.services.map((service) => (
                         <div key={service.id} className="bg-gray-50 dark:bg-gray-900 rounded-xl overflow-hidden">
                           <button
                             onClick={() => toggleService(service.id)}
-                            className="w-full p-6 text-left hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                            className="w-full p-6 text-left hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors cursor-pointer"
                           >
                             <div className="flex items-center justify-between">
                               <div className="flex items-center space-x-3">
@@ -121,7 +113,7 @@ const Services: React.FC = () => {
                                   </p>
                                 </div>
                               </div>
-                              <div className="flex-shrink-0">
+                              <div className="flex-shrink-0 pointer-events-none">
                                 {expandedServices.has(service.id) ? (
                                   <ChevronUp className="h-5 w-5 text-red-600 dark:text-red-400" />
                                 ) : (
