@@ -13,6 +13,8 @@ const deploymentData = [
   { country: "de", value: 1, name: "Germany" },
   { country: "dk", value: 2, name: "Denmark" },
   { country: "id", value: 1, name: "Indonesia" },
+  { country: "zm", value: 1, name: "Zambia" },
+  { country: "in", value: 3, name: "India" },
 ];
 
 const DeploymentMap: React.FC = () => {
