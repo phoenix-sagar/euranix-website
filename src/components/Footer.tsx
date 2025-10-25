@@ -48,12 +48,8 @@ const Footer: React.FC = () => {
                 <span className="text-gray-400 text-sm">contact@euranix.com</span>
               </div>
               <div className="flex items-center space-x-3">
-                <Phone className="h-5 w-5 text-red-500" />
-                <span className="text-gray-400 text-sm">+91 XXX XXX XXXX</span>
-              </div>
-              <div className="flex items-center space-x-3">
                 <MapPin className="h-5 w-5 text-red-500" />
-                <span className="text-gray-400 text-sm">India</span>
+                <span className="text-gray-400 text-sm">The Pavilion, 62/63, Church Street, Bengaluru, Karnataka 560001</span>
               </div>
             </div>
           </div>
