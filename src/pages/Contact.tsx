@@ -129,11 +129,6 @@ const Contact: React.FC = () => {
                   <div className="bg-red-100 dark:bg-red-900/30 p-3 rounded-full flame-glow">
                     <Phone className="h-6 w-6 text-red-600 dark:text-red-400" />
                   </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900 dark:text-white mb-1">Phone</h3>
-                    <p className="text-gray-600 dark:text-gray-300">+91 XXX XXX XXXX</p>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">Mon-Fri, 9AM-6PM IST</p>
-                  </div>
                 </div>
 
                 <div className="flex items-start space-x-4">
@@ -142,7 +137,7 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 dark:text-white mb-1">Location</h3>
-                    <p className="text-gray-600 dark:text-gray-300">India</p>
+                    <p className="text-gray-600 dark:text-gray-300">The Pavilion, 62/63, Church Street, Bengaluru, Karnataka 560001</p>
                     <p className="text-sm text-gray-500 dark:text-gray-400">Serving clients globally</p>
                   </div>
                 </div>
