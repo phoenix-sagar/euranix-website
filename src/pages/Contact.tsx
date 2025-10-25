@@ -124,13 +124,6 @@ const Contact: React.FC = () => {
                     <p className="text-sm text-gray-500 dark:text-gray-400">We'll respond within 24 hours</p>
                   </div>
                 </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="bg-red-100 dark:bg-red-900/30 p-3 rounded-full flame-glow">
-                    <Phone className="h-6 w-6 text-red-600 dark:text-red-400" />
-                  </div>
-                </div>
-
                 <div className="flex items-start space-x-4">
                   <div className="bg-red-100 dark:bg-red-900/30 p-3 rounded-full flame-glow">
                     <MapPin className="h-6 w-6 text-red-600 dark:text-red-400" />
